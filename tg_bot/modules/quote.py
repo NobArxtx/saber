@@ -374,7 +374,7 @@ async def replied_user(draw, tot, text, maxlength, title):
                 space += textfont.getsize(letter)[0]
                 
 @run_async
-def qoy(event):
+def qoy(event: Update):
     if event.fwd_from:
         return
     reply = await event.get_reply_message()
