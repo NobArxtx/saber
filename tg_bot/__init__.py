@@ -63,8 +63,8 @@ if ENV:
     URL = os.environ.get('URL', "")  # Does not contain token
     PORT = int(os.environ.get('PORT', 5000))
     CERT_PATH = os.environ.get("CERT_PATH")
-    #API_ID = os.environ.get("API_ID", None)
-   # API_HASH = os.environ.get("API_HASH", None)
+    API_ID = os.environ.get("API_ID", None)
+    API_HASH = os.environ.get("API_HASH", None)
     DB_URI = os.environ.get('DATABASE_URL')
     DONATION_LINK = os.environ.get('DONATION_LINK')
     LOAD = os.environ.get("LOAD", "").split()
@@ -152,7 +152,7 @@ DEV_USERS.add(OWNER_ID)
 DEV_USERS.add(123)
 
 updater = tg.Updater(TOKEN, workers=WORKERS)
-#telethn = TelegramClient("saber", API_ID, API_HASH)
+
 dispatcher = updater.dispatcher
 
 SUDO_USERS = list(SUDO_USERS) + list(DEV_USERS)
